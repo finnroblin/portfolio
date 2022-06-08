@@ -1,4 +1,4 @@
-import {Link, Heading } from "@chakra-ui/react";
+import {Link } from "@chakra-ui/react";
 import Layout from "../../components/layouts/article";
 import { Title, SubHeading } from "../../components/post";
 import NextLink from "next/link"
@@ -15,7 +15,7 @@ const Article = () => {
         Amplify
     </SubHeading>
     <SubHeading>
-        An update to Tiago Santos's 2020 {``}
+        An update to Tiago Santos&apos;s 2020 {``}
         <NextLink href="https://medium.com/swlh/deploy-https-node-postgres-redis-react-to-aws-ef252567200d"
         >
             <Link> Medium article </Link>

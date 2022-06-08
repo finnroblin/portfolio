@@ -1,7 +1,12 @@
 {
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/bookshelf": "pages/bookshelf.js",
-  "/works": "pages/works.js"
+  "/404": "pages/404.html",
+  "/bookshelf": "pages/bookshelf.html",
+  "/posts": "pages/posts.html",
+  "/": "pages/index.html",
+  "/posts/deploying-to-aws": "pages/posts/deploying-to-aws.html",
+  "/works": "pages/works.html",
+  "/works/zenblock": "pages/works/zenblock.html",
+  "/_error": "pages/_error.js",
+  "/_app": "pages/_app.js"
 }

@@ -19,13 +19,10 @@ import Layout from '../components/layouts/article'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { BioSection, BioYear } from '../components/bio'
 import GameOfLife from '../components/game-of-life'
-import { GridItem } from '../components/grid-item'
+
 import {
   IoLogoGithub,
   IoLogoLinkedin,
-  IoLogOut,
-  IoEggOutline,
-  IoGitMerge,
   IoEggSharp
 } from 'react-icons/io5'
 const Page = () => {
@@ -79,14 +76,14 @@ const Page = () => {
             Work
           </Heading>
           <Paragraph>
-            I'm a motivated computer science student at the University of
+            I&apos;m a motivated computer science student at the University of
             Michigan with an interest in building tools and products to help us
-            live better, happier lives. This summer I'm building out{' '}
+            live better, happier lives. This summer I&apos;m building out{' '}
             <NextLink href="/works/zenblock">
               <Link> Zenblock</Link>
             </NextLink>
             , a productivity tool to help everyone save hours in their workday
-            through intuitive, guided time blocking. Come fall, I'll be working
+            through intuitive, guided time blocking. Come fall, I&apos;ll be working
             as a SDE Intern at Amazon. I love talking with new people, email me
             to get in touch!
           </Paragraph>

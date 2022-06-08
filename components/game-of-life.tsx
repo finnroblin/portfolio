@@ -1,7 +1,6 @@
 import {
   useColorModeValue,
   Text,
-  Stack,
   Box,
   Button,
   Container,
@@ -13,15 +12,15 @@ import {
   ModalBody,
   ModalOverlay,
   HStack,
-  Flex,
+  
   ModalFooter
 } from '@chakra-ui/react'
 import { useCallback, useRef, useState } from 'react'
 import { produce } from 'immer'
 
-enum LifeState {
-  Dead = 0,
-  Alive = 1
+enum _LifeState {
+  _Dead = 0,
+  _Alive = 1
 }
 
 const directions = [
@@ -45,7 +44,7 @@ const GameOfLife = ({
   const [grid, setGrid] = useState(() => {
     const rows = []
     for (let i = 0; i < numRows; i += 1) {
-      const col = Array.from(Array(numCols), () => LifeState.Dead)
+      const col = Array.from(Array(numCols), () => _LifeState._Dead)
       rows.push(col)
     }
     return rows
@@ -75,9 +74,9 @@ const GameOfLife = ({
             })
             // direction checks
             if (neighbors < 2 || neighbors > 3) {
-              gridCopy[i][j] = LifeState.Dead
-            } else if (currGrid[i][j] === LifeState.Dead && neighbors === 3) {
-              gridCopy[i][j] = LifeState.Alive
+              gridCopy[i][j] = _LifeState._Dead
+            } else if (currGrid[i][j] === _LifeState._Dead && neighbors === 3) {
+              gridCopy[i][j] = _LifeState._Alive
             }
           }
         }
@@ -91,11 +90,13 @@ const GameOfLife = ({
   const Overlay = () => (
     <ModalOverlay bg="blackAlpha.300" backdropFilter="blur(10px)" />
   )
+
+  const border =useColorModeValue('solid 1px black', 'solid 1px white');
   return (
     <>
       <HStack spacing={'20%'}>
         <Box>
-          <Text>Conway's Game Of Life</Text>
+          <Text>Conway&apos;s Game Of Life</Text>
         </Box>
         <HStack>
           <Button
@@ -125,9 +126,9 @@ const GameOfLife = ({
             <Overlay />
             <ModalContent>
               <ModalBody>
-                Conway's Game of Life is a cellular automaton. Click on each
+                Conway&apos;s Game of Life is a cellular automaton. Click on each
                 square to toggle its state between alive and dead, and press
-                "Start Simulation" to start the game. Each cell will live or die depending on its neighbors.
+                &quot;Start Simulation&quot; to start the game. Each cell will live or die depending on its neighbors.
               </ModalBody>
               <ModalFooter>
                   <Container>
@@ -157,13 +158,13 @@ const GameOfLife = ({
                 width={5}
                 height={5}
                 backgroundColor={grid[i][j] ? 'red' : undefined}
-                border={useColorModeValue('solid 1px black', 'solid 1px white')}
+                border={border}
                 onClick={() => {
                   const newGrid = produce(grid, gridCopy => {
                     gridCopy[i][j] =
-                      grid[i][j] === LifeState.Alive
-                        ? LifeState.Dead
-                        : LifeState.Alive
+                      grid[i][j] === _LifeState._Alive
+                        ? _LifeState._Dead
+                        : _LifeState._Alive
                   })
 
                   setGrid(newGrid)

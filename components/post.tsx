@@ -1,6 +1,6 @@
-import NextLink from 'next/link'
-import { Image, Box, Heading, Link, Badge } from '@chakra-ui/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
+
+import { Image, Box, Heading, Badge } from '@chakra-ui/react'
+
 
 export const Title = ({
   children

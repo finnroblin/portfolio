@@ -3,7 +3,6 @@ import React from 'react'
 import { Router } from 'next/router'
 import { Box, Container, VStack } from '@chakra-ui/react'
 import Navbar from '../navbar'
-import { JsxElement } from 'typescript'
 
 interface MainProps {
   children: React.ReactNode
