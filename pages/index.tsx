@@ -18,38 +18,33 @@ import NextLink from 'next/link'
 import Layout from '../components/layouts/article'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { BioSection, BioYear } from '../components/bio'
-import GameOfLife from '../components/game-of-life'
+// import GameOfLife from '../components/game-of-life'
 
-import {
-  IoLogoGithub,
-  IoLogoLinkedin,
-  IoEggSharp
-} from 'react-icons/io5'
+import { IoLogoGithub, IoLogoLinkedin, IoEggSharp } from 'react-icons/io5'
+import Callout from '../components/callout'
 const Page = () => {
   return (
     <Layout>
-      <Container>
-        <GameOfLife numRows={10} numCols={30}/>
-        <Box
-        // mt={3}
-          borderRadius="lg"
-          bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.300')}
-          p={3}
-          textAlign={'center'}
-          mb={2}
+      
+      
+      <Container
+      mt={2}
+      >
+        <Callout />
+        <Box 
+        display={{ md: 'flex' }}
+        marginTop={6}
+        marginBottom={2}
         >
-          Hello! I study CS and develop apps on the side
-        </Box>
-        <Box display={{ md: 'flex' }}>
+
           <Box flexGrow={1}>
             <Heading as="h2" variant="page-title">
               Finn Roblin
             </Heading>
-            <p> CS @ UMich | Building {' '}
-            <NextLink href="/works/zenblock">
-              <Link> Zenblock </Link>
-            </NextLink>
-                 | Incoming SDE Intern @ Amazon </p>
+            <p>
+              {' '}
+              CS @ UMich | EECS 281 IA | Prev. SDE Intern @ AWS
+            </p>
           </Box>
 
           <Box
@@ -78,14 +73,19 @@ const Page = () => {
           <Paragraph>
             I&apos;m a motivated computer science student at the University of
             Michigan with an interest in building tools and products to help us
-            live better, happier lives. This summer I&apos;m building out{' '}
+            live better, happier lives. I&apos;m an Instructional Aide for EECS 281, 
+            UMich&apos;s Data Structures & Algorithms course. Previously I was a SDE 
+            Intern at AWS, working on Data Prepper in the OpenSearch Services team.&nbsp; 
+            
             <NextLink href="/works/zenblock">
-              <Link> Zenblock</Link>
+              <Link
+                colorScheme={useColorModeValue('blue','purple')}
+              >Zenblock</Link>
             </NextLink>
             , a productivity tool to help everyone save hours in their workday
-            through intuitive, guided time blocking. Come fall, I&apos;ll be working
-            as a SDE Intern at Amazon. I love talking with new people, email me
-            to get in touch!
+            through intuitive timeboxing, is my most active side project.
+            I love talking with new people,
+            please do reach out!
           </Paragraph>
           <Box textAlign={'center'} mt={4}>
             <NextLink href="/works">
@@ -106,7 +106,7 @@ const Page = () => {
           </BioSection>
           <BioSection>
             <BioYear>Interests</BioYear>
-            Swimming, Biking, Running. Coffee. Building things. 
+            Swimming, Biking, Running. Coffee. Building things.
           </BioSection>
           <BioSection>
             <BioYear>Dreams</BioYear>
@@ -120,7 +120,6 @@ const Page = () => {
               Develop to help us live harmoniously with one another and nature
             </ListItem>
           </UnorderedList>
-
         </Section>
         <Section delay={'0.3'}>
           <Heading as="h3" variant="section-title">
@@ -176,7 +175,8 @@ const Page = () => {
             </ListItem>
           </List>
         </Section>
-      </Container>
+      </Container> 
+     
     </Layout>
   )
 }

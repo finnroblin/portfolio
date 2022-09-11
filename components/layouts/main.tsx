@@ -16,14 +16,15 @@ const Main = (props: MainProps) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Finn Roblin - Homepage</title>
       </Head>
-      <VStack spacing={200}>
-        
-          <Navbar path={props.router.asPath} />
-        
-<Box>
-        <Container maxW="container.md" pt={14}>
-          {props.children}
-        </Container>
+      <VStack 
+      spacing={20}
+      >
+        <Navbar path={props.router.asPath} />
+
+        <Box>
+          <Container maxW="container.md" pt={14}>
+            {props.children}
+          </Container>
         </Box>
       </VStack>
     </Box>

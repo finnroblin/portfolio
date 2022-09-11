@@ -178,16 +178,18 @@ const Navbar = (props: any) => {
       <Container
         display="flex"
         p={2}
-        maxW="container.md"
+        maxW="xl"
         flex-wrap="wrap"
         alignItems="center"
         justify-content="space-between"
       >
+        {/* <Center> */}
         <Flex align="center" mr={5}>
           <Heading as="h1" size="lg" letterSpacing={'tighter'}>
             <Logo />
           </Heading>
         </Flex>
+
         <Stack
           direction={{ base: 'column', md: 'row' }}
           display={{ base: 'none', md: 'flex' }}
@@ -206,6 +208,7 @@ const Navbar = (props: any) => {
           Bookshelf
           </LinkItem>
         </Stack>
+
         {/* <Stack
           direction={{ base: 'column', md: 'row' }}
           display={{ base: 'none', md: 'flex' }}
@@ -252,8 +255,9 @@ const Navbar = (props: any) => {
           </Box>
         </Box>
       </Container>
+      {/* </Center> */}
     </Box>
   )
 }
 
-export default Navbar
+export default Navbar;

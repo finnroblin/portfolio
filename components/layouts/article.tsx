@@ -3,6 +3,7 @@ import Head from 'next/head'
 import React from 'react'
 import { GridItemStyle } from '../grid-item'
 
+
 const variants = {
   hidden: { opacity: 0, x: 0, y: 20 },
   enter: { opacity: 1, x: 0, y: 0 },
@@ -13,10 +14,13 @@ const variants = {
   }
 }
 
-const Layout = ({ children, title }
-    : {children: React.ReactNode|React.ReactNode[]|undefined,
-    title?: string}
-    ) => (
+const Layout = ({
+  children,
+  title
+}: {
+  children: React.ReactNode | React.ReactNode[] | undefined
+  title?: string
+}) => (
   <motion.article
     initial="hidden"
     animate="enter"
@@ -35,6 +39,6 @@ const Layout = ({ children, title }
       <GridItemStyle />
     </>
   </motion.article>
-    )
+)
 
 export default Layout
