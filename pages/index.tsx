@@ -30,7 +30,7 @@ const Page = () => {
       <Container
       mt={2}
       >
-        <Callout />
+        {/* <Callout /> */}
         <Box 
         display={{ md: 'flex' }}
         marginTop={6}
@@ -43,7 +43,7 @@ const Page = () => {
             </Heading>
             <p>
               {' '}
-              CS @ UMich | EECS 281 IA | Prev. SDE Intern @ AWS
+              CS @ UMich | SDE Intern @ AWS | EECS 281 IA 
             </p>
           </Box>
 
@@ -73,9 +73,9 @@ const Page = () => {
           <Paragraph>
             I&apos;m a motivated computer science student at the University of
             Michigan with an interest in building tools and products to help us
-            live better, happier lives. I&apos;m an Instructional Aide for EECS 281, 
-            UMich&apos;s Data Structures & Algorithms course. Previously I was a SDE 
-            Intern at AWS, working on Data Prepper in the OpenSearch Services team.&nbsp; 
+            live better, happier lives. Right now I am an intern at AWS on Opensearch Ingestion, a data streaming platform. 
+            During the school year I am a teaching assistant (IA) for EECS 281, 
+            UMich&apos;s Data Structures & Algorithms course. &nbsp; 
             
             <NextLink href="/works/zenblock">
               <Link
@@ -98,7 +98,7 @@ const Page = () => {
 
         <Section delay={'0.2'}>
           <Heading as="h3" variant="section-title">
-            Interests, Skills, Dreams
+            Interests and Skills
           </Heading>
           <BioSection>
             <BioYear>Technologies</BioYear>
@@ -106,20 +106,8 @@ const Page = () => {
           </BioSection>
           <BioSection>
             <BioYear>Interests</BioYear>
-            Swimming, Biking, Running. Coffee. Building things.
+            Triathlon! Working on the swim. Coffee and building things.
           </BioSection>
-          <BioSection>
-            <BioYear>Dreams</BioYear>
-          </BioSection>
-          <UnorderedList>
-            <ListItem>
-              Unleash full human potential by augmenting our capabilities
-              through technology
-            </ListItem>
-            <ListItem>
-              Develop to help us live harmoniously with one another and nature
-            </ListItem>
-          </UnorderedList>
         </Section>
         <Section delay={'0.3'}>
           <Heading as="h3" variant="section-title">
